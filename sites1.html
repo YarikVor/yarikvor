@@ -3,8 +3,11 @@
 	<head>
 		<title>Найпопулярніші сайти України</title>
 		<script type="text/javascript">
+			var count = 0 ;
 			function onvisible(){
+				count +=1;
 				document.getElementById("surprise").innerHTML += '<img src="http://s17.rimg.info/9ddb058c2d267c604ec2e0e2349932e0.gif" >';
+				document.getElementById("count").innerHTML = count;
 			}
 		</script>	
 	</head>
@@ -102,7 +105,7 @@
 							 wikipedia 
 						</a>
 					</td>
-					<td>
+					<td id="count">
 						|
 					</td>
 					<td>
