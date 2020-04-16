@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table border="0" width="100%">
+            <tbody>
+                <tr>
+                    <td width="40%">
+                        <textarea id="ta1" style="width: calc(100% - 6px);" rows="20"></textarea>  
+                    </td>
+                    <td width="20%" align="center">
+                        <div align="left">
+                            
+                        </div>
+                        Інтервал:
+                        <input id="interval" type="number" value="4"><br>
+                        <input id="au" type="checkbox" name="a" onclick="automate()">Авто-інтервал<br><br><br>
+                        <button onclick="Ed()">Перевірити</button>
+                    </td>
+                    <td width="40%">
+                        <textarea id="ta2" style="width: calc(100% - 6px) ;" rows="20"></textarea>                            
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script type="text/javascript">
+            var str_= '';
+            function Ed(){
+                document.getElementById("ta2").value="";
+                str_=document.getElementById("ta1").value;
+                var str_cantle = str_.split('');
+                var str_count = str_cantle.length;
+                var str_one = '';
+                var num = 0;
+                var tipe = true;
+                Editor();
+                function Editor(){
+                    str_one=str_cantle[num];
+                    if(num<str_count){
+                        if (str_one!==","){
+                            document.getElementById("ta2").value+=str_one+'px';
+                            num+=1;
+                            Editor();
+                        }else{
+                            if (tipe){
+                                num+=1
+                                tipe=false;
+                                document.getElementById("ta2").value+=" "; 
+                                Editor();
+                            }else{
+                                num+=1
+                                tipe=true;
+                                document.getElementById("ta2").value+=","; 
+                                Editor();                          
+                            }
+                        }
+                    }
+                }                                         
+            }
+            function automate(){
+                if (document.getElementById("au").checked){
+                    Ed();
+                    setTimeout(automate,200);
+                }
+            }
+        </script>
+    
+
+</body></html>
