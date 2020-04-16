@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table border="2" width="100%">
+            <tbody>
+                <tr>
+                    <td width="40%">
+                        <textarea id="ta1" style="width: calc(100% - 6px);" rows="20"></textarea>  
+                    </td>
+                    <td width="20%" align="center">
+                        <div align="left">
+                            
+                        </div>
+                        Інтервал:
+                        <input id="interval" type="number" value="4">
+                    </td>
+                    <td width="40%">
+                        <textarea id="ta2" style="width: calc(100% - 6px) ;" rows="20"></textarea>                            
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script type="text/javascript">
+            var str_= '';
+            function Ed(){
+                document.getElementById("ta2").value="";
+                str_="\n\n"+document.getElementById("ta1").value;
+                var str_cantle = str_.split('');
+                var str_count = str_cantle.length;
+                var str_one = '';
+                var num = 0;
+                var tipe = 0;
+                var interval=0;
+                Editor();
+                function Editor(){
+                    if (num<str_count){
+                        str_one=str_cantle[num];
+                        if (str_one!=="\n"){
+                            document.getElementById("ta2").value+=str_one;
+                            num+=1;
+                            Editor();
+                        }else if( (str_one=="\n") && (str_cantle[num+1]=="\n")){
+                            if (tipe==0){
+                                document.getElementById("ta2").value+="\n<p>";
+                                tipe=1;
+                                interval=document.getElementById("interval").value;
+                                num+=1;
+                                Editor();
+                            }else if(tipe==2){
+                                document.getElementById("ta2").value+="\n</p>\n<p>";
+                                num+=1;
+                                tipe=1;
+                                Editor();
+                            }                        
+                        }else if(str_one=="\n"){
+                            if (tipe==1) {
+                            document.getElementById("ta2").value+="\n"+' '.repeat(interval);
+                            num+=1;
+                            tipe=2;
+                            Editor(); 
+                            }else{
+                                document.getElementById("ta2").value+="\n"+' '.repeat(interval)+"<br>\n"+' '.repeat(interval);
+                                num+=1;
+                                Editor();                                
+                            }
+                            
+                        }
+                    }else{document.getElementById("ta2").value+="\n</p>";}
+                }                            
+            }
+            setInterval(Ed,100);
+        </script>
+    </body>
+</html>
