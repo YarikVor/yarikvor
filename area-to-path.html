@@ -41,8 +41,13 @@
                     str_one=str_cantle[num];
                     if(num<str_count){
                         if (str_one!==","){
+                            str_one="";
+                            while(str_cantle[num]!=="," && num<str_count){
+                                str_one+=str_cantle[num];
+                                num+=1;
+                            }
                             document.getElementById("ta2").value+=str_one+'px';
-                            num+=1;
+                            
                             Editor();
                         }else{
                             if (tipe){
