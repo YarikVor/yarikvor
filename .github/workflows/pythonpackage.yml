@@ -1,7 +1,7 @@
 import time;
 a = 0;
 
-while a<0:
+while a<100:
   time.sleep(0.1);
   print("1");
   
