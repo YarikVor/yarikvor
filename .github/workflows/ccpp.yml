@@ -9,12 +9,12 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: ./configure
+      run: ./active.cpp
     - name: make
       run: make
     - name: make check
