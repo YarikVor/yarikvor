@@ -1,24 +1,21 @@
-#include <cstdlib>
 #include <iostream>
-
-using namespace std;
-
+#include <fstream>
+#include <string>
+ 
 int main()
 {
- FILE *f; int dat;
- srand(time(0));
- int n=rand()%30 + 1;
- cout << "File name? ";
- char s[20];
- cin.getline(s, 20);
- f=fopen(s, "wb");
- for (int i=1; i<=n; i++)
- { dat = rand()%101 - 50;
-   cout << dat << " ";
-   fwrite(&dat, sizeof(int), 1, f);
- }
- cout << endl;
- fclose(f);
-    system("PAUSE");
+    std::string line;
+ 
+    std::ifstream in("D:\\hello.txt"); // окрываем файл для чтения
+    if (in.is_open())
+    {
+        while (getline(in, line))
+        {
+            std::cout << line << std::endl;
+        }
+    }
+    in.close();     // закрываем файл
+     
+    std::cout << "End of program" << std::endl;
     return 0;
 }
