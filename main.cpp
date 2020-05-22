@@ -20,5 +20,5 @@ int main()
  cout << endl;
  fclose(f);
     system("PAUSE");
-    return EXIT_SUCCESS;
+    return 0;
 }
