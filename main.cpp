@@ -2,6 +2,6 @@
 using namespace std;
 unsigned int microseconds;
 int main(){
-	Sleep(100000);
+	Sleep(1000);
 	return 0;
 }
