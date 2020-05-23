@@ -4,7 +4,7 @@
  
 int main()
 {
-    std::string line;
+    std::string line = "вавлавлалвлалвлавдавадвапжлвжалпжвалпжвжпощапрзщпаизвозлтвзщаптхвжптлвєрлтЗЖвр";
  
     std::ifstream in("D:\\hello.txt"); // окрываем файл для чтения
     if (in.is_open())
