@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background: url(Images/back.jpg);
+			width: 90%;
+			margin: 20px auto;
+		}
+		a{
+			font-weight: bold;
+			font-style: italic;
+		}
+		#header{
+			background-color: lightskyblue;
+			color: white;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 22px;
+			width: 100%;
+			height: 70px;
+			margin-bottom: 15px;
+		}
+		.title1{
+			position: relative;
+			top: 17px;
+			left: 40px;
+			width: fit-content;
+		}
+		.title2{
+			color: black;
+			font-style: normal;
+			font-size: 14px;
+			position: relative;
+			left: 61px;
+		}
+		#content{
+			margin-top: 30px;
+			display: flex;
+		}
+		#left_content{
+			background-color: white;
+			list-style-image: url(Images/list.png);
+			width: 200px;
+			float: left;
+		}
+		#center_content{
+			background-color: white;
+			width: calc( 100% - 200px );
+			float: left;
+			font-size: 26px;
+			border-bottom-right-radius: 20px;
+			border: 3px solid black;
+			border-left-width: 0;
+		}
+		#center_content::first-letter{
+			color: blue;
+			font-size: 35px;
+			font-weight: bold;
+			text-indent: 20px;
+		}
+		#center_content::first-line{
+			text-indent: 25px;
+		}
+		#footer{
+			margin-top: 20px;
+			background-color: lightskyblue;
+			width: 100%;
+			height: 50px;
+		}
+		.footer_images{
+			height: 32px;
+			margin: 9px 16px;
+			float: left;
+		}
+		.footer_text{
+			margin: 16px 30px 16px 0;
+			float: left;
+			width: content;
+			font-weight: bold;
+		}
+		.image_left{
+			float: left;
+		}
+		.image_right{
+			float: right;
+		}
+	</style>
+	<title>My sites</title>
+</head>
+<body>
+	<div id="header">
+		<div class="title1">
+			MyWebSites
+			<div class="title2">Lorem ipsum dolar</div>
+		</div>
+	</div>
+	<div><img style="width: 100%;" src="Images/contp.png"></div>
+	<div id="content">
+		<div id="left_content">
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Hobbies</a></li>
+				<li><a href="">Art</a></li>
+				<li><a href="">Sport</a></li>
+				<li><a href="">Work</a></li>
+				<li><a href="">My college</a></li>
+			</ul>
+		</div>
+		<div id="center_content">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+			<img class="image_left" src="Images/html.png">
+			eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, 
+			<img class="image_right" src="Images/css.png">
+			quis nostrum exercitationem ullam corporis
+			
+			suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+		</div>
+	</div>
+	<div id="footer">
+		<img class="footer_images" src="Images/twitter.png">
+		<img class="footer_images" src="Images/github.png">
+		<div class="footer_text">+ 380 (XX) XX XXX XX XX</div>
+		<div class="footer_text">d0i5a1n1a2@ukr.net</div>
+	</div>
+</body>
+</html>
