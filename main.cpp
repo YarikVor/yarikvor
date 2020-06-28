@@ -6,7 +6,7 @@ int main()
 {
     std::string line = "вавлавлалвлалвлавдавадвапжлвжалпжвалпжвжпощапрзщпаизвозлтвзщаптхвжптлвєрлтЗЖвр";
  
-    std::ifstream in(".\\hello.txt"); // окрываем файл для чтения
+    std::ifstream in("D:\\a\\dropbox\\dropbox\\git.txt"); // окрываем файл для чтения
     if (in.is_open())
     {
         while (getline(in, line))
